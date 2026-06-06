@@ -1,5 +1,5 @@
 /**
- * Vercel Serverless Function
+ * Vercel Serverless Function (CommonJS)
  * Path: /api/chat
  *
  * This proxy avoids browser CORS restrictions by calling OpenAI from the server.
@@ -8,7 +8,7 @@
  * - OPENAI_MODEL (optional, default model if client doesn't pass)
  */
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // CORS (helpful for local preview / custom domains)
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
@@ -54,5 +54,4 @@ export default async function handler(req, res) {
   } catch (e) {
     res.status(500).json({ error: e?.message || String(e) });
   }
-}
-
+};

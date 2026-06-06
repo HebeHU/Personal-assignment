@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>胡慧琳｜个人网站</title>
+    <meta name="description" content="胡慧琳的个人网站：关于我、教育背景、工作经历、技能特长、学习与探索。附 AI 岗位匹配器。" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#/about" aria-label="返回：关于我">
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 12c2.6 0 4.7-2.1 4.7-4.7S14.6 2.6 12 2.6 7.3 4.7 7.3 7.3 9.4 12 12 12Z"
+                stroke="currentColor"
+                stroke-width="1.6"
+              />
+              <path
+                d="M4.2 21.3c1.8-4 4.7-6 7.8-6s6 2 7.8 6"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          <span class="logo-text">胡慧琳</span>
+        </a>
+
+        <nav class="topnav" aria-label="网站导航">
+          <a class="topnav-link" href="#/about" data-route="about">关于我</a>
+          <a class="topnav-link" href="#/education" data-route="education">教育背景</a>
+          <a class="topnav-link" href="#/experience" data-route="experience">工作经历</a>
+          <a class="topnav-link" href="#/skills" data-route="skills">技能特长</a>
+          <a class="topnav-link" href="#/explore" data-route="explore">学习与探索</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn ghost" type="button" id="openSettings">AI设置</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ABOUT -->
+      <section class="page is-active" data-page="about">
+        <div class="container hero">
+          <div class="hero-left">
+            <h1 class="hero-title">
+              Hi，<span class="hero-hi">我是胡慧琳</span>
+            </h1>
+            <p class="hero-role">Marketing · Big Data｜内容策略 / 海外营销 / 数据洞察</p>
+            <p class="hero-desc">
+              香港中文大学市场营销硕士（Big Data 方向）在读，具备 TEMU 海外营销内容策划、奥美整合营销与 IP 项目落地、百度-YY 商务与数据复盘实习经历。
+            </p>
+
+            <div class="hero-ctas">
+              <a class="btn primary" href="./assets/resume.pdf" target="_blank" rel="noreferrer">下载简历</a>
+              <button class="btn" type="button" id="scrollContact">联系我</button>
+            </div>
+
+            <div class="ai-box" aria-label="AI 岗位匹配器">
+              <div class="ai-box-title">
+                <span class="dot" aria-hidden="true"></span>
+                <span>AI 岗位匹配器</span>
+              </div>
+              <div class="ai-input-row">
+                <textarea
+                  id="jdInput"
+                  class="ai-input"
+                  rows="3"
+                  placeholder="粘贴目标岗位 JD（越完整越好），点击「开始匹配」查看匹配度，并生成更匹配的新简历内容。"
+                ></textarea>
+                <button class="btn black" type="button" id="runMatch">开始匹配 →</button>
+              </div>
+              <div class="ai-hint">
+                <span class="muted">提示：本功能需要部署到 Vercel，并在环境变量中配置 OPENAI_API_KEY；右上角「AI设置」可选填模型名并测试。</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right" aria-label="形象区（可替换为你的照片）">
+            <div class="photo-wrap">
+              <div class="photo-outline" aria-hidden="true"></div>
+              <div class="photo-frame" aria-hidden="false">
+                <img class="photo-img" src="./assets/profile.jpg" alt="个人照片" loading="lazy" />
+              </div>
+              <p class="photo-tip muted">主页已使用你的个人照片；如需抠图+描边的效果我也可以继续优化。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container section">
+          <div class="grid-2">
+            <article class="card">
+              <h2 class="card-title">联系方式</h2>
+              <div class="kv">
+                <button class="copy-row" data-copy="13242036339" type="button">
+                  <span class="k">电话</span><span class="v">13242036339</span><span class="hint">点击复制</span>
+                </button>
+                <button class="copy-row" data-copy="huhuilin54321@163.com" type="button">
+                  <span class="k">邮箱</span><span class="v">huhuilin54321@163.com</span><span class="hint">点击复制</span>
+                </button>
+              </div>
+              <div class="mini-ctas" id="contact">
+                <a
+                  class="btn primary"
+                  href="mailto:huhuilin54321@163.com?subject=%E5%B2%97%E4%BD%8D%2F%E5%90%88%E4%BD%9C%E6%B4%BD%E8%B0%88"
+                  target="_blank"
+                  rel="noreferrer"
+                  >发邮件</a
+                >
+                <a class="btn" href="./assets/resume.pdf" target="_blank" rel="noreferrer">查看简历</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h2 class="card-title">概览亮点</h2>
+              <ul class="bullets">
+                <li>海外社媒内容洞察：输出 5 份深度内容策略报告</li>
+                <li>短视频脚本创作：100+ 条脚本、10+ 高流量内容</li>
+                <li>整合营销与 IP 落地：CBA / 成都大运会等项目协同推进</li>
+                <li>数据分析与复盘：用户画像、竞品爆点、可视化报告与迭代</li>
+              </ul>
+            </article>
+          </div>
+
+          <footer class="footer">
+            <p class="muted">© <span id="year"></span> 胡慧琳 · 明亮简洁 · 淡紫色主题</p>
+          </footer>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="page" data-page="education">
+        <div class="container page-head">
+          <h1>教育背景</h1>
+          <p class="muted">以数据驱动的市场营销学习与研究。</p>
+        </div>
+        <div class="container section">
+          <div class="stack">
+            <article class="card">
+              <h2 class="card-title">香港中文大学（QS 32）</h2>
+              <p class="muted">市场营销（Big Data 方向）· 硕士 · GPA 3.8/4</p>
+              <p class="muted">2025.08 – 2026.11（在读）</p>
+              <ul class="bullets">
+                <li>相关课程：市场研究、消费者行为、AI 与大数据策略、数字营销、整合营销</li>
+                <li>方法与分析：机器学习、价格分析等</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h2 class="card-title">华南理工大学（985）</h2>
+              <p class="muted">国际经济与贸易 · 本科 · GPA 3.33/4（专业前 25%）</p>
+              <p class="muted">2019.09 – 2023.06</p>
+              <ul class="bullets">
+                <li>荣誉：校级二等奖/三等奖学金；年度三好学生；学院优秀学生团干部（连续 2 年）</li>
+              </ul>
+            </article>
+          </div>
+          <div class="spacer-lg" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="page" data-page="experience">
+        <div class="container page-head">
+          <h1>工作经历</h1>
+          <p class="muted">从洞察、策划到落地执行，覆盖内容与品牌增长链路。</p>
+        </div>
+        <div class="container section">
+          <div class="stack">
+            <article class="card">
+              <div class="card-head">
+                <h2 class="card-title">拼多多（上海）｜TEMU</h2>
+                <span class="tag">2023.07 – 2023.11</span>
+              </div>
+              <p class="muted">海外营销 · 创意内容策划</p>
+              <ul class="bullets">
+                <li>聚焦 TikTok / Instagram 内容生态，结合热点与海外用户偏好，输出 5 份深度内容策略报告</li>
+                <li>独立完成 100+ 条短视频脚本创作与质量把控，打造 10+ 高流量内容，多款进入内部优质内容榜单</li>
+                <li>联动商务、拍摄、剪辑团队推进制作全流程，基于平台数据反馈快速迭代创意方向，保障高效落地</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-head">
+                <h2 class="card-title">奥美（北京）</h2>
+                <span class="tag">2023.03 – 2023.06</span>
+              </div>
+              <p class="muted">AE 客户执行实习生</p>
+              <ul class="bullets">
+                <li>参与伊利年度传播规划与季度整合营销方案撰写，推进 CBA 赛事合作、成都大运会赞助等大型 IP 项目落地</li>
+                <li>对接客户 Brief，联动内部创意/策略团队研讨与优化，全程协调沟通，保障物料准时产出及上线</li>
+                <li>收集并分析竞品与行业趋势，为新老产品策略与增量机会提供支撑</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-head">
+                <h2 class="card-title">百度-YY（广州）</h2>
+                <span class="tag">2022.04 – 2022.08</span>
+              </div>
+              <p class="muted">商务实习生</p>
+              <ul class="bullets">
+                <li>节假日前基于数据可视化模型挖掘热点，输出整合营销方案并联动多平台 KOL 矩阵合作推广</li>
+                <li>运用飞瓜、Q音、抖音指数等工具分析用户画像与竞品爆点，输出可视化复盘报告，驱动策略迭代</li>
+                <li>1 个月内拓展 50+ 广告推广资源，搭建 ToC 广告效果评价体系，提升投放精准度与运营效果</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="page" data-page="skills">
+        <div class="container page-head">
+          <h1>技能特长</h1>
+          <p class="muted">数据分析 + 内容创作 + 运营传播的复合能力。</p>
+        </div>
+        <div class="container section">
+          <div class="grid-3">
+            <article class="card">
+              <h2 class="card-title">语言</h2>
+              <ul class="bullets">
+                <li>雅思 7；英语听说读写可作为工作用语</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h2 class="card-title">数据与办公</h2>
+              <ul class="bullets">
+                <li>RStudio、SPSS、Eviews</li>
+                <li>Excel：SUM/IF、数据透视表、条件筛选等</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h2 class="card-title">内容与工具</h2>
+              <ul class="bullets">
+                <li>秀米、剪映、Canva、Xmind</li>
+                <li>社媒内容创作与运营经验（微博/小红书/抖音）</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="grid-2" style="margin-top: 14px">
+            <article class="card">
+              <h2 class="card-title">兴趣特长</h2>
+              <ul class="bullets">
+                <li>古筝：十级证书</li>
+                <li>观影 100+ 部；持续内容创作</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h2 class="card-title">公益经历</h2>
+              <ul class="bullets">
+                <li>ICBE 广州跨交会志愿者</li>
+                <li>中国大学生“互联网+”总决赛媒体联络组志愿者</li>
+                <li>深圳国际 BT 领袖大会志愿者等</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPLORE -->
+      <section class="page" data-page="explore">
+        <div class="container page-head">
+          <h1>学习与探索</h1>
+          <p class="muted">将经历沉淀为可复用的方法与作品（可继续补充链接与截图）。</p>
+        </div>
+        <div class="container section">
+          <div class="grid-2">
+            <article class="card">
+              <h2 class="card-title">研究项目沉淀</h2>
+              <ul class="bullets">
+                <li>面板数据分析：数据收集、建模、稳健性检验与可视化</li>
+                <li>输出：2.7w 字研究报告 + 40+ 页汇报 PPT（可补充截图/链接）</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h2 class="card-title">内容增长方法</h2>
+              <ul class="bullets">
+                <li>围绕平台热点与用户偏好，建立选题-脚本-复盘闭环</li>
+                <li>擅长把“业务目标”拆成“内容策略 + 可量化指标”</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="card" style="margin-top: 14px">
+            <h2 class="card-title">想加作品集？</h2>
+            <p class="muted">
+              你把作品链接（小红书/抖音/公众号文章）或截图发我，我可以在这里做成类似示例图的“作品卡片”，支持标签、外链与详情弹窗。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- AI RESULT MODAL -->
+    <div class="modal" id="matchModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="1"></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-label="岗位匹配结果">
+        <div class="modal-head">
+          <div class="modal-tabs">
+            <button class="pill is-active" type="button" data-tab="match">匹配</button>
+            <button class="pill" type="button" data-tab="resume">新简历预览</button>
+          </div>
+          <button class="btn ghost" type="button" data-close="1">关闭</button>
+        </div>
+
+        <div class="modal-body">
+          <section class="tab is-active" data-tab-panel="match">
+            <div class="match-grid">
+              <div class="card">
+                <div class="score-wrap">
+                  <div class="score-circle">
+                    <div class="score-num" id="overallScore">--</div>
+                    <div class="score-sub muted">综合分</div>
+                  </div>
+                  <div class="score-bars">
+                    <div class="bar-row">
+                      <span class="bar-k">学历</span>
+                      <div class="bar"><span class="bar-fill" id="barEdu"></span></div>
+                      <span class="bar-v" id="scoreEdu">--</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-k">工作经验</span>
+                      <div class="bar"><span class="bar-fill" id="barExp"></span></div>
+                      <span class="bar-v" id="scoreExp">--</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-k">技能特长</span>
+                      <div class="bar"><span class="bar-fill" id="barHard"></span></div>
+                      <span class="bar-v" id="scoreHard">--</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-k">软技能</span>
+                      <div class="bar"><span class="bar-fill" id="barSoft"></span></div>
+                      <span class="bar-v" id="scoreSoft">--</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <h2 class="card-title">匹配亮点</h2>
+                <ul class="bullets" id="matchHighlights"></ul>
+              </div>
+
+              <div class="card">
+                <h2 class="card-title">差距与建议</h2>
+                <ul class="bullets" id="matchGaps"></ul>
+              </div>
+
+              <div class="card">
+                <h2 class="card-title">总结</h2>
+                <p class="muted" id="matchSummary" style="margin: 0"></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab" data-tab-panel="resume">
+            <div class="card">
+              <div class="resume-actions">
+                <button class="btn primary" type="button" id="downloadMd">下载 Markdown</button>
+                <button class="btn" type="button" id="downloadPdf">下载 PDF</button>
+                <button class="btn ghost" type="button" id="copyResume">复制内容</button>
+              </div>
+              <div class="resume-preview" id="resumePreview"></div>
+              <pre class="resume-raw" id="resumeRaw" style="display: none"></pre>
+              <p class="muted" style="margin: 10px 0 0">
+                PDF 导出会在浏览器中生成；若离线无法加载依赖，可先下载 Markdown 再转 PDF。
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS MODAL -->
+    <div class="modal" id="settingsModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="1"></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-label="AI 设置">
+        <div class="modal-head">
+          <div class="modal-tabs">
+            <div class="pill is-active" style="pointer-events: none">AI 设置</div>
+          </div>
+          <button class="btn ghost" type="button" data-close="1">关闭</button>
+        </div>
+        <div class="modal-body">
+          <div class="card">
+            <div class="form">
+              <label class="label">
+                <span>Model</span>
+                <input id="apiModel" class="input" placeholder="gpt-4o-mini（示例，可不填）" />
+              </label>
+              <p class="muted" style="margin: 6px 0 0">
+                说明：此版本通过 <b>/api/chat</b>（Vercel Serverless）在服务端调用 OpenAI，避免浏览器 CORS 限制，也更安全。请在 Vercel 环境变量中配置 <b>OPENAI_API_KEY</b>（必填），可选配置 <b>OPENAI_MODEL</b>。
+              </p>
+              <div class="mini-ctas" style="margin-top: 12px">
+                <button class="btn primary" type="button" id="saveSettings">保存</button>
+                <button class="btn" type="button" id="testSettings">测试连接</button>
+              </div>
+              <p class="muted" id="settingsStatus" style="margin: 10px 0 0"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="to-top" type="button" aria-label="返回顶部">↑</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
